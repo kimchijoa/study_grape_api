@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsStudy</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+	<%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	  
+	<!--addition style for sungpa-->
+	<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/5.0.2/pusher.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-quill/0.4.1/react-quill.js"></script>
+
+	<link 
+	rel="stylesheet" href="https://d2mkevusy1mb28.cloudfront.net/turnchat/assets/design_guideline_snowball-886a7c88eeadf693820a27fd8abde545ebf451ab2414c72c9255e5bc928f2f00.css"
+	/>
+
+	<style>
+	  body,
+	  span,
+	  textarea,
+	  input,
+	  p, h1, h2, h3, h4, h5, div,
+	  h6 {
+		font-family: 'Arial' !important;
+		-webkit-font-smoothing: antialiased;
+		-moz-font-smoothing: antialiased;
+		-o-font-smoothing: antialiased;
+		line-height:1.5;
+		font-style: normal;
+		font-stretch: normal;
+		letter-spacing: normal;
+	  }
+
+	  .hover_bg:hover{
+		background-color:black;
+		color:white;
+	  }
+
+	  .floatingRightBar{
+		transition: 0.5s all;
+	  }
+
+	  .toastDefaultClass{
+		display:none;
+		visibility:none;
+		background-color:red;
+		transition:all 5s;
+		bottom: 10px;
+	  }
+
+	  .toastDefaultClass.show{
+		display:flex;
+		background-color:black;
+		color:white;
+		font-size:16px;
+		padding:20px;
+		border-radius:6px;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		height:50px;
+		animation: flickerAnimation 2s;
+		animation-fill-mode: forwards;
+		bottom:20px;
+	  }
+
+	  @keyframes flickerAnimation {
+		0%   { opacity:0; visilibity: none; }
+		50%  { opacity:1; visibility: visible; display:flex;}
+		100% { opacity:0; visibility: none; display:none;}
+	  }
+	</style>
+
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

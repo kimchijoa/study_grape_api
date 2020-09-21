@@ -1,0 +1,2 @@
+class GrapeSurvey < ApplicationRecord
+end

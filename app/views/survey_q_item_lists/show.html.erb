@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Survey q item:</strong>
+  <%= @survey_q_item_list.survey_q_item %>
+</p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @survey_q_item_list.item %>
+</p>
+
+<%= link_to 'Edit', edit_survey_q_item_list_path(@survey_q_item_list) %> |
+<%= link_to 'Back', survey_q_item_lists_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @survey_q_item.type %>
+</p>
+
+<p>
+  <strong>S title:</strong>
+  <%= @survey_q_item.s_title %>
+</p>
+
+<p>
+  <strong>S sub title:</strong>
+  <%= @survey_q_item.s_sub_title %>
+</p>
+
+<p>
+  <strong>Survey:</strong>
+  <%= @survey_q_item.survey %>
+</p>
+
+<%= link_to 'Edit', edit_survey_q_item_path(@survey_q_item) %> |
+<%= link_to 'Back', survey_q_items_path %>

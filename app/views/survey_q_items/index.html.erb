@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Survey Q Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>S title</th>
+      <th>S sub title</th>
+      <th>Survey</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @survey_q_items.each do |survey_q_item| %>
+      <tr>
+        <td><%= survey_q_item.type %></td>
+        <td><%= survey_q_item.s_title %></td>
+        <td><%= survey_q_item.s_sub_title %></td>
+        <td><%= survey_q_item.survey %></td>
+        <td><%= link_to 'Show', survey_q_item %></td>
+        <td><%= link_to 'Edit', edit_survey_q_item_path(survey_q_item) %></td>
+        <td><%= link_to 'Destroy', survey_q_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Survey Q Item', new_survey_q_item_path %>

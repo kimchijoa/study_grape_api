@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Survey Q Item Lists</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Survey q item</th>
+      <th>Item</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @survey_q_item_lists.each do |survey_q_item_list| %>
+      <tr>
+        <td><%= survey_q_item_list.survey_q_item %></td>
+        <td><%= survey_q_item_list.item %></td>
+        <td><%= link_to 'Show', survey_q_item_list %></td>
+        <td><%= link_to 'Edit', edit_survey_q_item_list_path(survey_q_item_list) %></td>
+        <td><%= link_to 'Destroy', survey_q_item_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Survey Q Item List', new_survey_q_item_list_path %>
